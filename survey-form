@@ -1,0 +1,237 @@
+<html>
+  <head>
+    <style>
+    
+    h1{
+      font-family:Sans-serif;
+      font-size:50px;
+      text-align:center;
+      padding-top:2%;
+    }
+    
+    #survey-form{
+      text-align:center;
+    }
+    
+    body{
+      font-size:20px;
+      font-family:calibri;
+    }
+    
+    p{
+      text-align:center;
+      font-size:23px;
+      padding-top:4%;
+    }
+    
+    html,
+    #container{
+      background-image:url("https://img.freepik.com/free-photo/gray-wall-textures-background_74190-4389.jpg?size=626&ext=jpg");
+      background-size:cover;
+      height:100%;
+    }
+    
+    #main{
+      margin: 0 auto 0 auto;
+      /* background-color:#e6e6e6; */
+      background-size:cover;
+      background-image:url("http://support.lexmark.com/library/LEXMARK/Blank%20Page.jpg");
+      width:75%;
+      border-radius:4px;
+    }
+    
+    .align-right{
+      text-align:right;
+    }
+    
+    .align-left{
+      text-align:left;
+    }
+    
+    table{
+      width:100%;
+    }
+    
+    tr{
+      width:100%;
+      margin:0 auto 0 auto;
+    }
+    td{
+      width:50%;
+    }
+    
+    input{
+      padding:5px;
+      width:60%;
+      margin:5px;
+      height:20px;
+      border:1px solid #c0c0c0;
+      border-radius:2px;
+    }
+    
+    #dropdown{
+      height:30px;
+      width:140px;
+      padding:5px;
+      margin:5px;
+      margin-top:15px;
+      border:1px solid #c0c0c0;
+      border-radius:2px;
+    }
+    
+    .ratings{
+      margin-right:-90px;
+    }
+    
+    .radio{
+      position:relative;
+      left:-136px;
+      margin-left:5px;
+      display:block;
+      padding-bottom:10px;
+    }
+
+    .submit{
+      margin:6vh;
+      width:10vw;
+      padding:1%;
+    }
+    
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title">Survey Form</h1>
+      <div id="main">
+        <p id="description">Please let us know how we can The Gym can be better</p>
+        <form id="survey-form">
+          <table>
+            <tr>
+              <td class="align-right">
+                <label id="name-label">Name: </label>
+              </td>
+              <td class="align-left">
+                <input id="name" placeholder="Enter your name" required></input>
+            </td>
+          </tr>
+          <tr>
+            <td class="align-right">
+              <label id="email-label" class="align-right" required>Email:</label>
+            </td>
+            <td class="align-left">
+              <input id="email" type="email" name="email" placeholder="Enter your email" required></input>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="align-right">
+            <label id="number-label" type="number">Number: </label>
+          </td>
+          <td class="align-left">
+            <input type="number" id="number" min="1" max="125"
+              placeholder="Enter your phone number"></input>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="align-right">
+          <label>Which option describes your fitness goal: </label>
+        </td>
+        <td class="align-left">
+          <select id="dropdown">
+            <option disabled>Select an option</option>
+            <option>Lose Weight</option>
+            <option>Gain Weight</option>
+            <option>Endurance</option>
+            <option>Strengthening</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="align-right">
+          How like are you to recommend Our Fitness to a friend?
+        </td>
+        <td class="align-left">
+          <ul style="list-style:none">
+            <li class="radio">
+              <label><input type="radio" class="ratings" name="recommendation"
+                  value="forsure">For Sure</label>
+            </li>
+            <li class="radio">
+              <label><input type="radio" class="ratings" name="recommendation"
+                  value="maybe">Maybe</label>
+            </li>
+            <li class="radio">
+              <label><input type="radio" class="ratings" name="recommendation"
+                  value="notatall">Not at all</label>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="align-right">
+          <label>What did you most like about us?</label>
+        </td>
+        <td class="align-left">
+          <select id="dropdown">
+            <option>Opened 24/7</option>
+            <option>Equipment</option>
+            <option>Affordable</option>
+            <option>Training Classes</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="align-right">
+          <label>What can we improve even further?</label>
+        </td>
+        <td class="align-left">
+          <ul style="list-style:none">
+            <li class="radio">
+              <label><input type="checkbox" value="cleaniness" class="ratings"
+                  name="improve">Cleaniness</input><label>
+              </li>
+
+              <li class="radio">
+                <label><input type="checkbox" value="equipment" class="ratings"
+                    name="improve">Equipment</input><label>
+
+                </li>
+                <li class="radio">
+                  <label><input type="checkbox" value="stafftraining"
+                      class="ratings" name="improve">Staff training</input><label>
+                  </li>
+                  <li class="radio">
+                    <label><input type="checkbox" value="reducenoise"
+                        class="ratings" name="improve">Reduce Noise</input><label>
+                    </li>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="align-right">
+                    <label>Additional Comments</label>
+                  </td>
+                  <td class="align-left">
+                    <textarea id="additional-comments">
+
+                    </textarea>
+                  </td>
+                  
+                </tr>
+
+                
+              </table>
+
+              <button id="submit" class="submit" type="submit">Submit</button>
+              
+            </form>
+            
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
