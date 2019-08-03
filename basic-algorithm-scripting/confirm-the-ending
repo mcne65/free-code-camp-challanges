@@ -3,7 +3,9 @@ function confirmEnding(str, target) {
   let startPosition = str.length - target.length;
   
   if (str.substr(startPosition) === target) {
+    //debugging purpose
     console.log(str.substr(-target.length))
+    
     return true;
   } else {
     return false;
