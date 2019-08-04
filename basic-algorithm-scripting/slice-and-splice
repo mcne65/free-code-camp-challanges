@@ -1,0 +1,13 @@
+function frankenSplice(arr1, arr2, n) {
+ 
+  let copyOfArr2 = [...arr2];
+  let copyOfArr1 = [...arr1]
+
+  for(let i=0; i< copyOfArr1.length;i++){
+    copyOfArr2.splice(n,0, copyOfArr1[i])
+    n++;
+}
+  return copyOfArr2;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
